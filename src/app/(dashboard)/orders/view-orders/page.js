@@ -147,7 +147,7 @@ const ViewOrders = () => {
                     <h2 className="text-lg font-semibold text-gray-800">{order._id.substring(0, 8)}</h2>
                   </div>
                   <div className={`px-3 py-1 rounded-full text-xs font-medium ${getOrderStatusColor(order.status)}`}>
-                    {order.status || 'Processing'}
+                    {order.status || 'Shipping'}
                   </div>
                 </div>
                 
