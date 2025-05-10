@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎯 CRM Frontend
 
-## Getting Started
+This is the frontend for the CRM (Customer Relationship Management) application, built with **Next.js** and **Tailwind CSS**. It provides an intuitive and responsive user interface for managing campaigns, leads, contacts, and more — all authenticated securely via Google OAuth.
 
-First, run the development server:
+Live: 👉 [CRM Frontend App](https://crm-frontend-one-chi.vercel.app/)
+
+---
+
+## 🚀 Features
+
+- 🔐 **Google OAuth 2.0 Authentication**
+- 👤 **Role-based dashboards** (User/Manager)
+- 📊 **Campaign and Lead management**
+- ✉️ **Inbox with AI-generated smart message suggestions**
+- 💬 **DeepSeek AI integration** via OpenRouter for contextual message generation
+- ⚙️ **Backend integration** with protected routes
+- 🧭 **Responsive UI** using Tailwind CSS and modern design patterns
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Auth**: [Google OAuth 2.0](https://developers.google.com/identity)
+- **AI Integration**: [DeepSeek via OpenRouter](https://openrouter.ai/)
+- **HTTP Client**: Axios
+
+---
+
+## 📦 Local Setup Instructions
+
+### 1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/pianist22/CRM-frontend.git
+cd CRM-frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
+### 3. Setup Environment Variables
+Create a .env.local file and copy the variables from .env.sample.
+Fill in the following required variables:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+NEXT_PUBLIC_BACKEND_API_URL
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET
+NEXTAUTH_SECRET
+NEXTAUTH_URL
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##👉 Optional (For AI Integration)
 
-## Learn More
+To enable smart message suggestions, add:
+OPENROUTER_API_KEY → (Get it here)[https://openrouter.ai/]
+You can use the free DeepSeek-R3 model available on OpenRouter.
 
-To learn more about Next.js, take a look at the following resources:
+##💡 AI Integration (DeepSeek via OpenRouter)
+The application uses OpenRouter to call the DeepSeek-R3 language model to generate AI-powered message suggestions for your CRM campaigns.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example API Usage#
+```ts
+const res = await axios.post(
+  "https://openrouter.ai/api/v1/chat/completions",
+  {
+    model: "deepseek-chat",
+    messages: [{ role: "user", content: "Suggest a follow-up message to a lead." }],
+  },
+  {
+    headers: {
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+  }
+);
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚠️ Assumptions & Limitations
 
-## Deploy on Vercel
+- Google Authentication is mandatory; no manual login support is provided.
+- AI message suggestion is optional and only works with a valid OpenRouter API Key.
+- The backend expects valid Google auth tokens — unauthenticated users cannot access protected routes.
+- This is a prototype version — performance and scalability features may be added in future updates.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔗 Backend Repository
+👉 (CRM Backend GitHub Repo)[https://github.com/pianist22/CRM-Backend]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 🧑‍💼 Contact & Support
+For feedback, issues, or collaboration:
+- GitHub: (pianist22)[https://github.com/pianist22]
+- LinkedIn: (Priyanshu Saha)[https://www.linkedin.com/in/priyanshu-saha-339571262/]
+
+
+## ✅ Summary
+This frontend application acts as the visual layer of your CRM platform — complete with Google authentication, user-specific routing, campaign management, and optional smart AI suggestions for business communication. Built with performance and clarity in mind using the modern power of Next.js.
+
+
+
+
+
+
