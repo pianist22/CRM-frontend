@@ -43,21 +43,21 @@ npm install
 ```
 ### 3. Setup Environment Variables
 Create a .env.local file and copy the variables from .env.sample.
+
 Fill in the following required variables:
+- NEXT_PUBLIC_BACKEND_API_URL
+- GOOGLE_CLIENT_ID
+- GOOGLE_CLIENT_SECRET
+- NEXTAUTH_SECRET
+- NEXTAUTH_URL
 
-NEXT_PUBLIC_BACKEND_API_URL
-GOOGLE_CLIENT_ID
-GOOGLE_CLIENT_SECRET
-NEXTAUTH_SECRET
-NEXTAUTH_URL
-
-##👉 Optional (For AI Integration)
+## 👉 Optional (For AI Integration)
 
 To enable smart message suggestions, add:
 OPENROUTER_API_KEY → (Get it here)[https://openrouter.ai/]
 You can use the free DeepSeek-R3 model available on OpenRouter.
 
-##💡 AI Integration (DeepSeek via OpenRouter)
+## 💡 AI Integration (DeepSeek via OpenRouter)
 The application uses OpenRouter to call the DeepSeek-R3 language model to generate AI-powered message suggestions for your CRM campaigns.
 
 Example API Usage#
