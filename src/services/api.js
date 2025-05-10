@@ -4,6 +4,7 @@ import { getSession } from "next-auth/react";
 
 const NEXT_API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
+
 const api = axios.create({
   baseURL: NEXT_API_BASE_URL,
   headers: {
@@ -14,6 +15,7 @@ const api = axios.create({
 // Add request interceptor to include auth token
 api.interceptors.request.use(
   async (config) => {
+    console.log(NEXT_API_BASE_URL);
     const session = await getSession();
     if (session?.user) {
       config.headers.Authorization = `Bearer ${session.user.id}`;
