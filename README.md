@@ -55,7 +55,7 @@ Fill in the following required variables:
 
 To enable smart message suggestions, 
 
-add: OPENROUTER_API_KEY → (Get it here)[https://openrouter.ai/]
+add: OPENROUTER_API_KEY → [Get it here](https://openrouter.ai/)
 
 You can use the free DeepSeek-R3 model available on OpenRouter.
 
@@ -88,12 +88,12 @@ const res = await axios.post(
 
 ## 🔗 Backend Repository
 
-👉 (CRM Backend GitHub Repo)[https://github.com/pianist22/CRM-Backend]
+👉 [CRM Backend GitHub Repo](https://github.com/pianist22/CRM-Backend)
 
 # 🧑‍💼 Contact & Support
 For feedback, issues, or collaboration:
-- GitHub: (pianist22)[https://github.com/pianist22]
-- LinkedIn: (Priyanshu Saha)[https://www.linkedin.com/in/priyanshu-saha-339571262/]
+- GitHub: [pianist22](https://github.com/pianist22)
+- LinkedIn: [Priyanshu Saha](https://www.linkedin.com/in/priyanshu-saha-339571262/)
 
 
 ## ✅ Summary
