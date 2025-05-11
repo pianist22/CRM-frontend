@@ -52,7 +52,7 @@ Fill in the following required variables:
 - NEXTAUTH_URL
 
 ## CRM ACHITECTURE
-<img src="https://github.com/pianist22/Images/blob/main/CRM-achitecture.jpg" alt="crm-acrhitecture" width="400" height='500'>
+<img src="https://github.com/pianist22/Images/blob/main/CRM-achitecture.jpg" alt="crm-acrhitecture" width="1000" height='600'>
 
 ## 👉 Optional (For AI Integration)
 
