@@ -51,6 +51,9 @@ Fill in the following required variables:
 - NEXTAUTH_SECRET
 - NEXTAUTH_URL
 
+## CRM ACHITECTURE
+<img src="https://github.com/pianist22/Images/blob/main/CRM-achitecture.jpg" alt="crm-acrhitecture" width="400" height='500'>
+
 ## 👉 Optional (For AI Integration)
 
 To enable smart message suggestions, 
